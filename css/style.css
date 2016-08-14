@@ -356,6 +356,21 @@ input, textarea, #urlMessage p {
 	#header p.author {
 		display: none;
 	}
+	#header .fork {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 135px;
+		height: 135px;
+		background: url(../images/fork.png) no-repeat left top transparent;
+	}
+	#header .fork a {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 135px;
+		height: 135px;
+	}
 	
 /* Info-Pages */
 #infos {
