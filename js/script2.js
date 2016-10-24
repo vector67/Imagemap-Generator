@@ -246,7 +246,7 @@ $(document).ready(function(){
     });
 	
 	// close donate popup
-	$('#feedbackPopup a').click('a', function(e) {
+	$('#feedbackPopup').hover(function(e) {
 		$('#feedbackPopup').slideUp(400);
 		e.preventDefault();
 	});

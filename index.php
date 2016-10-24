@@ -11,6 +11,7 @@
  * Version	v2.0
  * About	http://dariodomi.de
  * Copyright (c) by Dario D. Müller
+ * GitHub -> https://github.com/DarioDomiDE/Imagemap-Generator
  */
 
 require_once('config.php');
@@ -62,8 +63,8 @@ if(!is_dir($uploadDir))
 	mkdir($uploadDir);
 }
 
-// delete old images from server
-$lifetimeInDays = 4;
+// delete old images from server -> 2 = 1 day
+$lifetimeInDays = 2;
 if ($handle = opendir($uploadDir))
 {
 	while (false !== ($file = readdir($handle)))
@@ -105,6 +106,7 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 		<div id="header">
 			<p><a href="http://imagemap-generator.dariodomi.de/"><img src="images/logo.png" alt="Imagemap Generator - Set links to image - image mapping tool" title="" id="logo" /></a></p>
 			<p class="author">Easy Imagemap Generator by <a rel="author" href="https://plus.google.com/113304109683958874741/">Dario D. Müller</a></p>
+			<div class="fork"><a href="https://github.com/DarioDomiDE/Imagemap-Generator" target="_blank"></a></div>
 		</div>
 	</header>
 		<?php
@@ -299,9 +301,8 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 					<li>Copy the Imagemap HTML code</li>
 				</ul>
 				<h3>About me</h3>
-				<p>Hi folks, My name is <a href="https://plus.google.com/113304109683958874741/" target="_blank">Dario D. Müller</a>, web developer and freelance programmer based in Hamburg, Germany. I personally use this software for developing Newsletter and Landingpages.</p>
-				<p>In some kinds of HTML, for example email templates, I don't have the opportunity to use special CSS hacks. It's better to use many images with a lot of links via image maps.</p>
-				<p>I'm really sorry for problems in previous versions, I apologize for that. If you have questions or find bugs, don't be shy to send me an email to <span class="email"></span>. I'm also happy for getting some feedback :)</p>
+				<p>Hi folks, My name is <a href="https://plus.google.com/113304109683958874741/" target="_blank">Dario</a>, I'm a web developer and freelance programmer in Hamburg, Germany. I build this tool for easily developing Newsletter and Landingpages.</p>
+				<p>In some kinds of HTML, for example email templates, you don't have the opportunity to use special CSS hacks. It's better to use many images with a lot of links via image maps.</p>
 			</div>
 		</article>
 	</div>
@@ -335,8 +336,7 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 	
 	<div id="infotext">
 		<address class="author"><b>Easy Imagemap Generator</b><br />
-		<!--More Infos and Projects visit <a href="http://dariodomi.de" target="_blank">dariodomi.de</a><br />-->
-		Uploads are deleted after 3 days<br />
+		Uploads are deleted after 1 day<br />
 		This Software uses Google Analytics<br />
 		Feedback? <span class="email"></span><br />
 		Copyright &copy; <?php echo date('Y'); ?> by <a rel="author" href="https://plus.google.com/113304109683958874741/" title="Dario D. Müller">Dario D. Müller</a><br />
@@ -360,17 +360,18 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 				<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
+			<span id="paypalAmount">3 € ?</span>
 		</div>
 	</div>
 	
 	<div id="feedbackPopup" class="insetEffect hidden">
 		<span></span>
-		<a href="#"><i class="icon icon-clear-2"></i></a>
-		<p>Do you find this tool useful? Give feedback or buy me a beer <b>:-)</b></p>
+		<!--<a href="#"><i class="icon icon-clear-2"></i></a>-->
+		<p>Do you find this tool helpful? <!--Give feedback or buy me a beer <b>:-)</b>--></p>
 	</div>
 	
 	<footer>
-		<p>Project &copy; <?php echo date("Y"); ?> by <a href="http://dariodomi.de" target="_blank">Dario D. M&uuml;ller</a><span></span><a href="http://dariodomi.de/contact" target="_blank">Feedback &amp; Contact</a></p>
+		<p>Project &copy; <?php echo date("Y"); ?> by <a href="http://dariodomi.de" target="_blank">Dario D. M&uuml;ller</a><!--<span></span><a href="http://dariodomi.de/contact" target="_blank">Feedback &amp; Contact</a>--></p>
 	</footer>
 	
 	<!-- jQuery File Upload -->
