@@ -672,23 +672,25 @@ footer {
 	position: relative;
 }
 	#social .paypal form {
-		padding: 2px 0 0 16px;
+		padding: 2px 0 0 0;
+		text-align: center;
 	}
 	#social .paypal form input {
 		background: none;
 	}
-	#paypalAmount {
+	/*#paypalAmount {
 		position: absolute;
 		right: 12px;
 		top: 6px;
 		font-weight: bold;
-	}
+	}*/
 #feedbackPopup {
 	position: absolute;
 	right: 12px;
-	top: 164px;
-	width: 230px;
-	height: 30px;
+	/*top: 164px;*/
+	top: 48px;
+	width: 150px;
+	height: 55px;
 	padding: 3px 20px;
 	
 	background-color: #F9F9F9;
@@ -723,7 +725,7 @@ footer {
 	}
 	#feedbackPopup p {
 		font-weight: bold;
-		margin: 6px 0 0 0;
+		margin: 10px 0 0 0;
 	}
 
 /* * * * UPLOADIFY * * * */

@@ -303,6 +303,7 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 				<h3>About me</h3>
 				<p>Hi folks, My name is <a href="https://plus.google.com/113304109683958874741/" target="_blank">Dario</a>, I'm a web developer and freelance programmer in Hamburg, Germany. I build this tool for easily developing Newsletter and Landingpages.</p>
 				<p>In some kinds of HTML, for example email templates, you don't have the opportunity to use special CSS hacks. It's better to use many images with a lot of links via image maps.</p>
+				<p><b>PS: Thanks for your donations :-)</b></p>
 			</div>
 		</article>
 	</div>
@@ -349,10 +350,12 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 	<div id="social">
 		<?php $text = 'Easy%20Imagemap%20Generator%20for%20html%20image%20mapping:%20http://imagemap-generator.dariodomi.de'; ?>
 		<!--<a href="https://www.xing.com/app/user?op=share;url=http://imagemap-generator.dariodomi.de" target="_blank" title="Share on Xing" class="xing" /></a>-->
+		<!--
 		<a href="https://www.facebook.com/sharer/sharer.php?u=http://imagemap-generator.dariodomi.de" target="_blank" title="Share on Facebook" class="facebook"></a>
 		<a href="http://twitter.com/home?status=<?php echo $text; ?>" target="_blank" title="Share on Twitter" class="twitter" /></a>
 		<a href="https://plus.google.com/share?url=http://imagemap-generator.dariodomi.de" target="_blank" title="Share on Google+" class="gplus" /></a>
 		<a href="" title="Give Feedback" class="feedback" /></a>
+		-->
 		<div class="insetEffect paypal">
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
@@ -360,14 +363,14 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 				<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 			</form>
-			<span id="paypalAmount">3 € ?</span>
+			<!--<span id="paypalAmount">3 € ?</span>-->
 		</div>
 	</div>
 	
 	<div id="feedbackPopup" class="insetEffect hidden">
 		<span></span>
 		<!--<a href="#"><i class="icon icon-clear-2"></i></a>-->
-		<p>Do you find this tool helpful? <!--Give feedback or buy me a beer <b>:-)</b>--></p>
+		<p>Did you find Imagemap Generator valuable? <!--Give feedback or buy me a beer <b>:-)</b>--></p>
 	</div>
 	
 	<footer>
