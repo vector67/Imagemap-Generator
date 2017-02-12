@@ -116,10 +116,7 @@ $(document).ready(function(){
 	resizeUploadContainer();
 	
 	// set a coordinate point
-	$('#mapContainer').click(function(e) {
-		setCoordinates(e, 1);
-		e.preventDefault();
-	});
+	
 	
 	// ...
 	$('#newUpload span, .textareaButton3').click(function(e) {
@@ -280,8 +277,8 @@ var textarea = '';
 function setCoordinates(e, status) {
 	var x = e.pageX;
 	var y = e.pageY;
-
-	$('#dots').append('<img class="dot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAABGdBTUEAALGPC/xhBQAAABh0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjM2qefiJQAAACFJREFUGFdj9J/6KomBgUEYiN8yADmlQPwfRIM4SVCBJAAiRREoec4ImAAAAABJRU5ErkJggg==" style="left: '+ (x-1) +'px; top: '+ (y-1) +'px;" />');
+    console.log("got " + x + "x" + y);
+	//$('#dots').append('<img class="dot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAABGdBTUEAALGPC/xhBQAAABh0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjM2qefiJQAAACFJREFUGFdj9J/6KomBgUEYiN8yADmlQPwfRIM4SVCBJAAiRREoec4ImAAAAABJRU5ErkJggg==" style="left: '+ (x-1) +'px; top: '+ (y-1) +'px;" />');
 
 	var offset = $('#imagemap4posis img').offset();
 	x -= parseInt(offset.left);
@@ -480,4 +477,13 @@ function enterImagelinkForm() {
 		$('a.imageurl_submit').after('<p class="error hidden">Incorrect input (Example: www. [...] .jpg / .png / .gif)</p>');
 		$('a.imageurl_submit').parent().find('.error').slideDown(400).delay(5000).slideUp(400, function(){ $(this).remove(); });
 	}
+}
+var counter = 0;
+function imageDragged(event){
+    if(counter>25){
+        setCoordinates(event, 1);
+        counter = 0;
+        console.log("stuff happened");
+	}
+    counter++;
 }

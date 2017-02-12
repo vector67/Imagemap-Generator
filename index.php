@@ -76,7 +76,7 @@ if ($handle = opendir($uploadDir))
 			$year = substr($dateStr, 0, 2);
 			$month = substr($dateStr, 2, 2);
 			$day = substr($dateStr, 4, 2);
-			$date = new DateTime('20'.$year.'-'.$month.'-'.$day);
+            $date = new DateTime('20'.$year.'-'.$month.'-'.$day);
 			$dateNow = new DateTime(date('Y-m-d', time() - 60*60*24*$lifetimeInDays));
 			$interval = $date->diff($dateNow);
 			$diff = (int)$interval->format('%R%a');
@@ -319,7 +319,7 @@ if(isset($_SESSION['image']) && $_SESSION['image'] != null && !empty($_SESSION['
 					//$attr = ' width="'.$_SESSION['image'][1].'" height="'.$_SESSION['image'][2].'"';
 				}
 			?>
-			<img src="<?php echo ($uploaded) ? $_SESSION['image'][0] : '#'; ?>"<?php echo $attr; ?> id="main" class="imgmapMainImage" alt="" usemap="#map" />
+			<img draggable="true" ondrag="imageDragged(event)"src="<?php echo ($uploaded) ? $_SESSION['image'][0] : '#'; ?>"<?php echo $attr; ?> id="main" class="imgmapMainImage" alt="" usemap="#map" />
 			<map name="map" id="map"></map>
 		</div>
 		<div class="form">
